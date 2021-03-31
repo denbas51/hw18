@@ -1,49 +1,169 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Roboto&display=swap");
-body {
-  padding-top: 20px;
-  &:before {
-    z-index: 10001;
-    line-height: 20px;
-    font-weight: bold;
-    text-align: center;
-    position: fixed;
-    font-size: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: limegreen;
-    content: "Xsmall";
+// @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap");
+// body {
+//   padding-top: 20px;
+//   &:before {
+//     z-index: 10001;
+//     line-height: 20px;
+//     font-weight: bold;
+//     text-align: center;
+//     position: fixed;
+//     font-size: 20px;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 20px;
+//     background: limegreen;
+//     content: "Xsmall";
+//   }
+//   @include media-breakpoint-up(sm) {
+//     &:before {
+//       content: "small";
+//       background: #f00;
+//     }
+//   }
+//   @include media-breakpoint-up(md) {
+//     font-size: $font-size-base;
+//     &:before {
+//       content: "middle";
+//       background: green;
+//     }
+//   }
+//   @include media-breakpoint-up(lg) {
+//     &:before {
+//       content: "Large";
+//       background: turquoise;
+//     }
+//   }
+//   @include media-breakpoint-up(xl) {
+//     &:before {
+//       content: "XLarge";
+//       background: #f09;
+//     }
+//   }
+//   @include media-breakpoint-up(xxl) {
+//     &:before {
+//       content: "XXLarge";
+//       background: #90f;
+//     }
+//   }
+// }
+
+.nav-link {
+  margin-left: 50px;
+  font-stretch: condensed;
+}
+.navbar-text {
+  font-size: 9px;
+}
+.navbar-text.h1 {
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 0;
+  line-height: 9px;
+  letter-spacing: 3px;
+  span {
+    letter-spacing: 11px;
   }
-  @include media-breakpoint-up(sm) {
-    &:before {
-      content: "small";
-      background: #f00;
-    }
-  }
-  @include media-breakpoint-up(md) {
-    font-size: $font-size-base;
-    &:before {
-      content: "middle";
-      background: green;
-    }
-  }
+}
+.navbar-nav {
   @include media-breakpoint-up(lg) {
-    &:before {
-      content: "Large";
-      background: turquoise;
-    }
-  }
-  @include media-breakpoint-up(xl) {
-    &:before {
-      content: "XLarge";
-      background: #f09;
-    }
-  }
-  @include media-breakpoint-up(xxl) {
-    &:before {
-      content: "XXLarge";
-      background: #90f;
+    li {
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        background: $Turbo;
+        width: 5px;
+        height: 5px;
+        top: calc(50% - 2.5px);
+        right: -27.5px;
+      }
+      &:last-child:after {
+        display: none;
+      }
     }
   }
 }
+.main-nav {
+  padding-left: 20px;
+  padding-right: 20px;
+  @include media-breakpoint-up(sm) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 100px;
+  }
+}
+.banner {
+  height: calc(100vh - 100px);
+  background: $Firefly;
+  position: relative;
+  min-height: 550px;
+}
+.main-banner {
+  height: 370px;
+  background: $GableGreen;
+  padding-left: 20px;
+  padding-right: 20px;
+  h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 35px;
+    font-stretch: condensed;
+  }
+}
+.btn-warning {
+  color: #131316;
+  background: $Turbo;
+  border-color: $Turbo;
+  font-stretch: condensed;
+  &:hover {
+    background: $white;
+  }
+}
+.arrows {
+  a {
+    background: $Turbo;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 30px);
+
+    &::after {
+      content: "";
+      background: url(../svg/Arrows.svg);
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: calc(50% - 9px);
+      left: calc(50% - 9px);
+    }
+  }
+}
+
+// .service-item {
+//   background: green;
+// }
+// .service {
+//   width: 108px;
+//   height: 108px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background: $Turbo;
+//   border-radius: 50%;
+//   border: 1px solid transparent;
+
+//   svg {
+//     fill: white;
+//   }
+//   &.graphic-design {
+//     &::after {
+//       background: #000;
+//       width: 39px;
+//       height: 39px;
+//     }
+//   }
+// }

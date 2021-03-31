@@ -1,1 +1,35 @@
 @import "variables";
+$dark: $GableGreen;
+$navbar-brand-margin-end: 5px;
+$h1-font-size: 30px;
+$h2-font-size: 4rem;
+$headings-color: $white;
+$headings-font-weight: 700;
+
+$navbar-dark-active-color: $Turbo;
+$navbar-dark-hover-color: $Turbo;
+$navbar-dark-color: $white;
+$font-weight-base: 300;
+$font-family-base: "Oswald", sans-serif;
+
+$nav-link-font-size: 14px;
+$nav-link-font-weight: 600;
+$navbar-nav-link-padding-x: 0;
+
+$container-padding-x: 0;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px,
+  xxl: 1320px,
+) !default;
+
+$input-btn-padding-y: 14px;
+$input-btn-padding-x: 46px;
+$btn-font-family: "Oswald", sans-serif;
+$btn-font-size: 20px;
+$btn-font-weight: 700;
+$btn-link-color: #fff;
+$btn-border-radius: 0;
