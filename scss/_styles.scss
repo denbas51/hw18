@@ -49,8 +49,11 @@
 // }
 
 .nav-link {
-  margin-left: 50px;
+  margin-left: 20px;
   font-stretch: condensed;
+  @include media-breakpoint-up(lg) {
+    margin-left: 50px;
+  }
 }
 .navbar-text {
   font-size: 9px;
@@ -175,7 +178,8 @@
   }
 }
 
-.icons-service {
+.service-item {
+  margin-bottom: 50px;
   h4 {
     color: #131316;
     font-size: 20px;
@@ -196,14 +200,87 @@
   border-radius: 50%;
   border: 1px solid transparent;
 
-  svg {
-    fill: white;
-  }
-  &.graphic-design {
+  &.html5 {
     &::after {
-      background: #000;
+      background: url(../images/sprite/sprite.svg#Icon);
       width: 39px;
       height: 39px;
+      content: "";
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(360deg)
+        brightness(104%) contrast(103%);
+    }
+  }
+  &:hover {
+    border: 1px solid #131316;
+    background: white;
+    &.html5 {
+      &::after {
+        filter: invert(86%) sepia(99%) saturate(2745%) hue-rotate(343deg)
+          brightness(94%) contrast(114%);
+      }
+    }
+  }
+
+  &.graphic-design {
+    &::after {
+      background: url(../images/sprite/sprite.svg#Icon2);
+      width: 39px;
+      height: 39px;
+      content: "";
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(360deg)
+        brightness(104%) contrast(103%);
+    }
+  }
+  &:hover {
+    border: 1px solid #131316;
+    background: white;
+    &.graphic-design {
+      &::after {
+        filter: invert(86%) sepia(99%) saturate(2745%) hue-rotate(343deg)
+          brightness(94%) contrast(114%);
+      }
+    }
+  }
+
+  &.photography {
+    &::after {
+      background: url(../images/sprite/sprite.svg#Icon3);
+      width: 39px;
+      height: 39px;
+      content: "";
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(360deg)
+        brightness(104%) contrast(103%);
+    }
+  }
+  &:hover {
+    border: 1px solid #131316;
+    background: white;
+    &.photography {
+      &::after {
+        filter: invert(86%) sepia(99%) saturate(2745%) hue-rotate(343deg)
+          brightness(94%) contrast(114%);
+      }
+    }
+  }
+
+  &.developing {
+    &::after {
+      background: url(../images/sprite/sprite.svg#Icon4);
+      width: 39px;
+      height: 39px;
+      content: "";
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(360deg)
+        brightness(104%) contrast(103%);
+    }
+  }
+  &:hover {
+    border: 1px solid #131316;
+    background: white;
+    &.developing {
+      &::after {
+        filter: invert(86%) sepia(99%) saturate(2745%) hue-rotate(343deg)
+          brightness(94%) contrast(114%);
+      }
     }
   }
 }
